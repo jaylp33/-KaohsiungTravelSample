@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import 'reset';
+
+*, *:after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+i {
+    font-family: "Font Awesome 5 Free" ;
+}
+
+.wrap {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+
+    .header {
+        width: 100%;
+        height: 380px;
+        background: url(./asset/Hero.png);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .headerTitle {
+            margin-bottom: 10vh;
+            color: #fff;
+            font-size: 36px;
+        }
+
+        .dropbox {
+            position: relative;
+
+            svg {
+                position: absolute;
+                font-size: 36px;
+                right: 10px;
+                bottom: 10px;
+                pointer-events: none;
+                transition: all .5s;
+            }
+
+            &.active {
+                svg {
+                    transform: rotateX(180deg) translateY(-15px);
+                }
+            }
+        }
+
+        #locationPicker{
+            width: 350px;
+            height: 5vh;
+            background: rgba(255,255,255, .7);
+            border-radius: 3px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all .2s;
+            appearance: none;
+            padding: 0px 24px;
+            font-size: 18px;
+            word-break: normal;
+            position: relative;
+            line-height: 2;
+            text-align: center;
+
+            &:hover {
+                background: rgba(255,255,255, .8);
+            }
+
+            option[value=""] {
+                display: none;
+                background-image: url(./asset/icons_down.png);
+                
+            }
+
+            
+        }
+    // headerEnd
+    }
+
+    .popularChoice{
+        width: 78%;
+        height: 120px;
+        position: absolute;
+        left: 112px;
+        top: 350px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px grey;
+
+        .popularTitle {
+            display: inline-block;
+            padding: 1rem;
+            font-size: 22px;
+            color: #559AC8;
+        }
+
+        &:after {
+            content: '';
+            border-bottom: 3px dashed #559AC8 ;
+            width: 1024px;
+            height: 5px;
+            position: absolute;
+            bottom: -50px;
+            left: -112px;
+        }
+
+        .popularList {
+            display:flex;
+            justify-content: space-around;
+
+            .popularItem {
+                border-radius: 5px;
+                padding: 1rem 2rem;
+                font-size: 20px;
+                color: #3b3b3b;
+                cursor: pointer;
+                transition: all .5s;
+                opacity: .7;
+
+
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.2);
+                }
+            }
+
+        }
+    }
+
+    .whiteSpaceReserve {
+        width: 100%;
+        height: 10rem;
+    }
+
+    .content {
+        padding: 1.5rem 0;
+
+
+        .travelData {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all .7s;
+
+            
+        }
+        .cardOut {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        .travelTitle {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            padding-bottom: 3rem;
+        }
+
+        .travelPoints {
+            display: inline-block;
+            width: 47%;
+            margin: 1.2%;
+            box-shadow: 0 0 5px grey;
+            position: relative;
+            cursor: pointer;
+            transition: all .5s;
+
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                // position: relative;
+                transition: all .5s;
+
+
+               .fa-map-marker-alt {
+                   font-size: 21px;
+                   color: #f5a623;
+               }
+
+               .fa-mobile-alt {
+                   font-size: 21px;
+                   margin-left: 2px;
+                   color: #559ac8;
+               }
+
+               .fa-tag {
+                   color: #f5d005;
+                   margin-right: 10px;
+               }
+
+               .fa-clock {
+                   color: #8a81ca;
+               }
+
+               span {
+                   padding: .5rem 5px;    
+               }
+
+               .point_tag {
+                   position: absolute;
+                   right: 5rem;
+                   bottom: 10px;
+               }
+
+               
+            }
+            .point_img {
+                height: 320px;
+                object-fit: fill;
+            }
+
+            .point_description {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,.7);
+                opacity: 0;
+                transition: all .5s;
+                color: #fff;
+                font-size: 20px;
+                padding: 2rem 2rem;
+                line-height: 1.5;
+
+            }
+
+            &.active {
+                .point_img, 
+                .point_tag,
+                .point_openingTime,
+                .point_address,
+                .point_contact {
+                    opacity: 0;
+                }
+
+                .point_description{
+                    opacity: 1;
+                }
+            }
+
+        // travelPoint end 
+        }
+    // content End
+    }
+
+    .footer {
+        width: 100%;
+        height: 90px;
+        background: #559AC8;
+
+    // footer End
+    }
+
+
+// Wrap End
+}
+
+
+.card-body-flex {
+    display: flex;
+    align-items: center;
+}
+
+.paginationDiv {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.page-link {
+    transition: all .5s;
+}
+
+.page-item.active {
+    .page-link {
+        background-color: grey;
+    }
+}
