@@ -107,7 +107,6 @@ i {
   cursor: pointer;
   transition: all 0.2s;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   padding: 0px 24px;
   font-size: 18px;
@@ -196,6 +195,13 @@ i {
   cursor: pointer;
   transition: all 0.5s;
 }
+@media (max-width: 415px) {
+  .wrap .content .travelPoints {
+    display: block;
+    width: 95%;
+    margin: 3%;
+  }
+}
 .wrap .content .travelPoints .card-body {
   display: flex;
   flex-direction: column;
@@ -229,6 +235,11 @@ i {
 .wrap .content .travelPoints .point_img {
   height: 320px;
   object-fit: fill;
+}
+@media (max-width: 415px) {
+  .wrap .content .travelPoints .point_img {
+    height: 500px;
+  }
 }
 .wrap .content .travelPoints .point_description {
   position: absolute;

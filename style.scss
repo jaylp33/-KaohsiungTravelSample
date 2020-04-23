@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 @import 'reset';
+@mixin iphone() {
+    @media (max-width:415px) {
+        @content
+    }
+}
 
 *, *:after, *::before {
     box-sizing: border-box;
@@ -170,6 +175,12 @@ i {
             cursor: pointer;
             transition: all .5s;
 
+            @include iphone(){
+                display: block;
+                width: 95%;
+                margin: 3%;
+            }
+
             .card-body {
                 display: flex;
                 flex-direction: column;
@@ -181,6 +192,7 @@ i {
                .fa-map-marker-alt {
                    font-size: 21px;
                    color: #f5a623;
+                   
                }
 
                .fa-mobile-alt {
@@ -213,6 +225,9 @@ i {
             .point_img {
                 height: 320px;
                 object-fit: fill;
+                @include iphone() {
+                    height: 500px;
+                }
             }
 
             .point_description {
