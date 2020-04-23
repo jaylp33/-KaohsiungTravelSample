@@ -217,20 +217,45 @@ i {
   margin-left: 2px;
   color: #559ac8;
 }
+@media (max-width: 415px) {
+  .wrap .content .travelPoints .card-body .fa-mobile-alt {
+    font-size: 28px;
+  }
+}
 .wrap .content .travelPoints .card-body .fa-tag {
   color: #f5d005;
   margin-right: 10px;
 }
+@media (max-width: 415px) {
+  .wrap .content .travelPoints .card-body .fa-tag {
+    font-size: 28px;
+  }
+}
 .wrap .content .travelPoints .card-body .fa-clock {
   color: #8a81ca;
 }
+@media (max-width: 415px) {
+  .wrap .content .travelPoints .card-body .fa-clock {
+    font-size: 26px;
+  }
+}
 .wrap .content .travelPoints .card-body span {
   padding: 0.5rem 5px;
+}
+@media (max-width: 415px) {
+  .wrap .content .travelPoints .card-body span {
+    font-size: 26px;
+  }
 }
 .wrap .content .travelPoints .card-body .point_tag {
   position: absolute;
   right: 5rem;
   bottom: 10px;
+}
+@media (max-width: 415px) {
+  .wrap .content .travelPoints .card-body .point_tag {
+    font-size: 24px;
+  }
 }
 .wrap .content .travelPoints .point_img {
   height: 320px;
@@ -254,6 +279,11 @@ i {
   font-size: 20px;
   padding: 2rem 2rem;
   line-height: 1.5;
+}
+@media (max-width: 415px) {
+  .wrap .content .travelPoints .point_description {
+    font-size: 30px;
+  }
 }
 .wrap .content .travelPoints.active .point_img,
 .wrap .content .travelPoints.active .point_tag,
