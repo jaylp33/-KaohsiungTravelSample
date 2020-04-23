@@ -82,7 +82,7 @@ i {
 .wrap .header .headerTitle {
   margin-bottom: 10vh;
   color: #fff;
-  font-size: 4rem;
+  font-size: 36px;
 }
 .wrap .header .dropbox {
   position: relative;
@@ -107,6 +107,7 @@ i {
   cursor: pointer;
   transition: all 0.2s;
   -webkit-appearance: none;
+     -moz-appearance: none;
           appearance: none;
   padding: 0px 24px;
   font-size: 18px;
@@ -114,12 +115,6 @@ i {
   position: relative;
   line-height: 2;
   text-align: center;
-}
-@media (max-width: 415px) {
-  .wrap .header #locationPicker {
-    width: 100vw;
-    height: 8vh;
-  }
 }
 .wrap .header #locationPicker:hover {
   background: rgba(255, 255, 255, 0.8);
@@ -138,13 +133,6 @@ i {
   border-radius: 5px;
   box-shadow: 0 0 5px grey;
 }
-@media (max-width: 415px) {
-  .wrap .popularChoice {
-    width: 90%;
-    left: 50px;
-    height: 140px;
-  }
-}
 .wrap .popularChoice .popularTitle {
   display: inline-block;
   padding: 1rem;
@@ -160,11 +148,6 @@ i {
   bottom: -50px;
   left: -112px;
 }
-@media (max-width: 415px) {
-  .wrap .popularChoice:after {
-    left: -55px;
-  }
-}
 .wrap .popularChoice .popularList {
   display: flex;
   justify-content: space-around;
@@ -177,12 +160,6 @@ i {
   cursor: pointer;
   transition: all 0.5s;
   opacity: 0.7;
-}
-@media (max-width: 415px) {
-  .wrap .popularChoice .popularList .popularItem {
-    padding: 1.5rem 2.5rem;
-    font-size: 2rem;
-  }
 }
 .wrap .popularChoice .popularList .popularItem:hover {
   opacity: 1;

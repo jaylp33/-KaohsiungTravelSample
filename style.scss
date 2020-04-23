@@ -35,7 +35,7 @@ i {
         .headerTitle {
             margin-bottom: 10vh;
             color: #fff;
-            font-size: 36px;
+            font-size: 4rem;
         }
 
         .dropbox {
@@ -73,6 +73,11 @@ i {
             line-height: 2;
             text-align: center;
 
+            @include iphone() {
+                width: 100vw;
+                height: 8vh;
+            }
+
             &:hover {
                 background: rgba(255,255,255, .8);
             }
@@ -82,6 +87,7 @@ i {
                 background-image: url(./asset/icons_down.png);
                 
             }
+
 
             
         }
@@ -98,6 +104,12 @@ i {
         border-radius: 5px;
         box-shadow: 0 0 5px grey;
 
+        @include iphone() {
+            width: 90%;
+            left: 50px;
+            height: 140px;
+        }
+
         .popularTitle {
             display: inline-block;
             padding: 1rem;
@@ -113,6 +125,10 @@ i {
             position: absolute;
             bottom: -50px;
             left: -112px;
+
+            @include iphone() {
+                left: -55px;
+            }
         }
 
         .popularList {
@@ -127,6 +143,11 @@ i {
                 cursor: pointer;
                 transition: all .5s;
                 opacity: .7;
+
+                @include iphone() {
+                    padding: 1.5rem 2.5rem;
+                    font-size: 2rem;
+                }
 
 
                 &:hover {
@@ -161,7 +182,7 @@ i {
 
         .travelTitle {
             text-align: center;
-            font-size: 28px;
+            font-size: 3rem;
             font-weight: 700;
             padding-bottom: 3rem;
         }
@@ -322,6 +343,10 @@ i {
 
 .page-link {
     transition: all .5s;
+    @include iphone() {
+        padding: 2rem;
+        font-size: 30px;
+    }
 }
 
 .page-item.active {
