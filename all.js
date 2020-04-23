@@ -130,7 +130,7 @@ const selectDropData = locationValue => {
         }
       } else {
         for (let j = 1; j < pageTotal + 1; j++) {
-            nav += `<li class="page-item"><a class="page-link" href="#" data-num=${j}>${j}</a></li>`
+            nav += `<li class="page-item active"><a class="page-link" href="#" data-num=${j}>${j}</a></li>`
         }
       }
 
