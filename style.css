@@ -107,6 +107,7 @@ i {
   cursor: pointer;
   transition: all 0.2s;
   -webkit-appearance: none;
+     -moz-appearance: none;
           appearance: none;
   padding: 0px 24px;
   font-size: 18px;

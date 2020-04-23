@@ -187,7 +187,7 @@ const updateList = (newData) => {
             str += `<div class="point_tag"><i class="fas fa-tag"></i>${e.Ticketinfo}</div>`;
         }
 
-        str += `</div></div>`;
+        str += `<div class="point_description">${e.Description}</div></div></div>`;
     }
 
 
