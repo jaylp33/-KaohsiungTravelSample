@@ -107,7 +107,6 @@ i {
   cursor: pointer;
   transition: all 0.2s;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   padding: 0px 24px;
   font-size: 18px;
@@ -258,6 +257,14 @@ i {
   width: 100%;
   height: 90px;
   background: #559AC8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .footer div {
+  padding: 5px;
+  font-size: 18px;
 }
 
 .card-body-flex {

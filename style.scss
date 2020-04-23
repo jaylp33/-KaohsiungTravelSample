@@ -254,6 +254,15 @@ i {
         width: 100%;
         height: 90px;
         background: #559AC8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div{
+            padding: 5px;
+            font-size: 18px;
+        }
 
     // footer End
     }
